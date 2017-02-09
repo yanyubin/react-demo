@@ -29,7 +29,7 @@ react-demo
     项目的运行需要依赖各种 npm 包，需要在文件的 “dependencies” 或 “devDependencies” 项下写明 npm 包的名称及版本。
     现在这个项目还是空的，所以这里还没有这两项
 ### 2、安装配置webpack
-    <pre><code>$ npm install webpack --save-dev</code></pre>
+<code border="1px solid red">$ npm install webpack --save-dev</code>
 
 
 
