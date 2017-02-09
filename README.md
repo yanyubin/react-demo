@@ -4,7 +4,7 @@ react-demo
 -------
 # 项目结构
 ---
-<pre>
+<code>
 - src
     - index.js
     - App.js
@@ -13,4 +13,4 @@ react-demo
 - package.json
 - server.js
 - webpack.config.js
-</pre>
+</code>
