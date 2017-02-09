@@ -1,8 +1,7 @@
-# react-demo
+react-demo
+====
 learn react 
 
-
-~~~
 项目结构
 - src
     - index.js
@@ -12,4 +11,4 @@ learn react
 - package.json
 - server.js
 - webpack.config.js
-~~~
+
