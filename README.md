@@ -2,8 +2,9 @@ react-demo
 ====
 头创建一个基于 React, webpack, babel 的模板项目
 -------
-<pre>
 # 项目结构
+----------------------------------------------------
+<pre>
 - src
     - index.js
     - App.js
@@ -13,4 +14,3 @@ react-demo
 - server.js
 - webpack.config.js
 </pre>
-
