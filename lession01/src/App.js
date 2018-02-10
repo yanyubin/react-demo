@@ -1,21 +1,34 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
+import React, {
+    Component
+} from 'react';
+
+import ContactsApp from './components/ContactsApp.js'
+
 import './App.css';
 
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-    );
-  }
+    state = {
+        contacts: []
+    }
+    componentDidMount() {
+        fetch('https://api.randomuser.me/?nat=us,gb&results=50')
+            .then(response => response.json())
+            .then(parsedResponse => parsedResponse.results.map(user => ({
+                name: `${user.name.first} ${user.name.last}`,
+                email: user.email,
+                thumbnail: user.picture.thumbnail
+            })))
+            .then(contacts => this.setState({
+                contacts
+            }));
+    }
+    render() {
+        return (
+            <div className="App">
+              <ContactsApp contacts={this.state.contacts}/>
+            </div>
+        );
+    }
 }
 
 export default App;
