@@ -8,7 +8,7 @@ import {
 let nextTodoId = 0
 export const addTodo = (title) => ({
     type: ADD_TODO,
-    id: String(nextTodoId++),
+    id: nextTodoId++,
     title
 })
 
